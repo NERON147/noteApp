@@ -1,0 +1,289 @@
+@import './normalize.css';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+.header {
+    max-width: 1200px;
+    font-size: 40px;
+    margin: 0 auto;
+    padding-top: 30px;
+    font-weight: 500;
+}
+
+.main-wrapper {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.addnote-wrapper {
+    padding-top: 30px;
+    position: sticky;
+    top: 0px;
+    height: 220px;
+}
+
+.title {
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.input-title {
+    margin-bottom: 10px;
+    background-color: inherit;
+    border: 1px solid rgba(128, 128, 128, 0.442);
+    border-radius: 5px;
+    width: 400px;
+    height: 30px;
+    transition: all 0.2s;
+}
+
+.input-title:focus {
+    border: 2px solid rgba(135, 182, 244, 0.442);
+
+}
+
+
+.descr {
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.input-descr {
+    margin-bottom: 10px;
+    background-color: inherit;
+    border: 1px solid rgba(128, 128, 128, 0.425);
+    border-radius: 5px;
+    width: 400px;
+    height: 55px;
+    transition: all 0.2s;
+    hyphens: auto;
+}
+
+.input-descr:focus {
+    border: 2px solid rgba(135, 182, 244, 0.442);
+}
+
+.btn {
+    width: 90px;
+    text-align: center;
+    padding: 10px;
+    background-color: #2971FB;
+    border-radius: 5px;
+    color: #fff;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.btn:hover {
+    box-shadow: 0 0 20px 5px gray;
+}
+
+.btn:active {
+    scale: 0.9
+}
+
+.note-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 230px);
+    grid-gap: 20px;
+    padding-top: 30px;
+}
+
+.note {
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+
+.note-content {
+    padding: 15px;
+}
+
+.note-title {
+    font-weight: 600;
+    height: 70px;
+}
+
+.note-descr {
+    padding-top: 10px;
+    font-size: 13px;
+    -ms-text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -ms-line-clamp: 3;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    display: -webkit-box;
+    display: box;
+    word-wrap: break-word;
+    -webkit-box-orient: vertical;
+    box-orient: vertical;
+}
+
+.btn-wrapper {
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.open-btn {
+    font-size: 12px;
+    padding: 10px;
+    border: 1px solid blue;
+    border-radius: 5px;
+    color: blue;
+    cursor: pointer;
+    transition: all .2s;
+}
+
+.delele-btn {
+    font-size: 12px;
+    padding: 10px;
+    border: 1px solid red;
+    border-radius: 5px;
+    color: red;
+    cursor: pointer;
+    transition: all .2s;
+}
+
+.open-btn:hover {
+    box-shadow: 0 0 20px 5px gray;
+}
+
+.open-btn:active {
+    scale: 0.9
+}
+
+.delele-btn:hover {
+    box-shadow: 0 0 20px 5px gray;
+}
+
+.delele-btn:active {
+    scale: 0.9
+}
+
+.note2 {
+    color: black;
+}
+
+.message {
+    margin-top: 20px;
+    color: red;
+    font-weight: 700;
+}
+
+.open-wraper {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.open-header {
+    margin-top: 50px;
+}
+
+
+.open-note {
+    margin-top: 20px;
+}
+
+.open-title {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.open-descr {
+    margin-top: 30px;
+}
+
+.open-header {
+    color: gray;
+}
+
+@keyframes float1 {
+    0% {
+        transform: translate(0, 0)
+    }
+
+    15% {
+        transform: translate(10px, 0)
+    }
+
+    30% {
+        transform: translate(-10px, 0)
+    }
+
+    45% {
+        transform: translate(10px, 0)
+    }
+
+    60% {
+        transform: translate(-10px, 0)
+    }
+
+    75% {
+        transform: translate(10px, 0)
+    }
+
+    90% {
+        transform: translate(-10px, 0)
+    }
+
+    100% {
+        transform: translate(0, 0)
+    }
+}
+
+.message {
+    animation: float1 .5s;
+}
+
+@media (max-width: 1200px) {
+    .main-wrapper {
+        display: block;
+    }
+
+    .addnote-wrapper {
+        margin: 0 auto;
+        max-width: 400px;
+    }
+
+    .note-wrapper {
+        padding-top: 50px;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    .note-wrapper {
+        grid-template-columns: repeat(2, 200px);
+    }
+
+    .addnote-wrapper {
+        position: static;
+    }
+
+    .open-wraper {
+        padding: 10px;
+    }
+
+    .note-title {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 500px) {
+    .note-wrapper {
+        max-width: 360;
+        grid-template-columns: repeat(2, 180px);
+    }
+
+    .note-title {
+        font-size: 13px;
+    }
+}
