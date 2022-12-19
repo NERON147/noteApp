@@ -286,4 +286,12 @@ body {
     .note-title {
         font-size: 13px;
     }
+
+    .open-btn {
+        padding: 8px;
+    }
+
+    .delele-btn {
+        padding: 8px;
+    }
 }
