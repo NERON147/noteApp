@@ -7,6 +7,7 @@ body {
 
 .container {
     padding: 10px;
+    margin-right: 10px;
 }
 
 
@@ -283,11 +284,11 @@ body {
 
 @media (max-width: 500px) {
     .input-title {
-        width: 370px;
+        width: 360px;
     }
 
     .input-descr {
-        width: 370px;
+        width: 360px;
     }
     .addnote-wrapper {
         max-width: 360px;
@@ -312,18 +313,19 @@ body {
 
 @media (max-width: 400px) {
     .input-title {
-        width: 290px;
+        width: 270px;
     }
 
     .input-descr {
-        width: 290px;
+        width: 270px;
     }
 
     .addnote-wrapper {
-        max-width: 280px;
+        max-width: 270px;
     }
 
     .note-wrapper {
+        margin-top: 10px;
         max-width: 270px;
         grid-template-columns: repeat(2, 135px);
     }
