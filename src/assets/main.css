@@ -5,6 +5,10 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
+.container {
+    padding: 10px;
+}
+
 
 .header {
     max-width: 1200px;
@@ -251,7 +255,7 @@ body {
 
     .addnote-wrapper {
         margin: 0 auto;
-        max-width: 400px;
+        max-width: 390px;
     }
 
     .note-wrapper {
@@ -278,8 +282,18 @@ body {
 }
 
 @media (max-width: 500px) {
+    .input-title {
+        width: 370px;
+    }
+
+    .input-descr {
+        width: 370px;
+    }
+    .addnote-wrapper {
+        max-width: 360px;
+    }
     .note-wrapper {
-        max-width: 360;
+        max-width: 360px;
         grid-template-columns: repeat(2, 180px);
     }
 
@@ -293,5 +307,38 @@ body {
 
     .delele-btn {
         padding: 8px;
+    }
+}
+
+@media (max-width: 400px) {
+    .input-title {
+        width: 290px;
+    }
+
+    .input-descr {
+        width: 290px;
+    }
+
+    .addnote-wrapper {
+        max-width: 280px;
+    }
+
+    .note-wrapper {
+        max-width: 270px;
+        grid-template-columns: repeat(2, 135px);
+    }
+
+    .note-title {
+        font-size: 12px;
+    }
+
+    .open-btn {
+        font-size: 9px;
+        padding: 3px;
+    }
+
+    .delele-btn {
+        font-size: 9px;
+        padding: 3px;
     }
 }
