@@ -1,6 +1,6 @@
 <template>
   <div id="list-complete-demo">
-    <transition-group name="list-complete" tag="p" class="note-wrapper">
+    <transition-group name="list-complete" tag="div" class="note-wrapper">
       <div
         class="note list-complete-item"
         v-for="(note, index) in notes"

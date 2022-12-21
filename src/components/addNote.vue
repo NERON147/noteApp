@@ -29,17 +29,14 @@ export default {
   },
   methods: {
     addNote() {
-      const range = 10000;
-      const count = 1;
+     let maxId = 0;
+  for (const obj of this.$store.getters.NOTES) {
+    if (obj.id > maxId) {
+      maxId = obj.id;
+    }
+  }
+  const newId = maxId + 1;
 
-      let m = {};
-      let a = [];
-      for (let i = 0; i < count; ++i) {
-        let r = Math.floor(Math.random() * (range - i));
-        a.push((r in m ? m[r] : r) + 1);
-        let l = range - i - 1;
-        m[r] = l in m ? m[l] : l;
-      }
       if (this.title == "" || this.descr == "") {
         return (
           this.disabled == true,
@@ -51,7 +48,7 @@ export default {
       let info = {
         title: this.title,
         descr: this.descr.replace(/\n/g, '<br/>'),
-        id: a.join(),
+        id: newId,
       };
 
       this.$store.dispatch("addToNote", info);
